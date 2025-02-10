@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="yourname">
+        <createTable tableName="population">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="population_year" type="varchar(4)"/>
+            <column name="population" type="bigint"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="yourname">
+        <insert tableName="population">
+            <column name="population_year" value="2024"/>
+            <column name="population" value="283488000"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
